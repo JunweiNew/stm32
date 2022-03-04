@@ -1,0 +1,18 @@
+--cpu Cortex-M3
+".\objects\core_cm3.o"
+".\objects\startup_stm32f10x_ld_modify.o"
+".\objects\stm32f10x_gpio.o"
+".\objects\stm32f10x_rcc.o"
+".\objects\stm32f10x_flash.o"
+".\objects\misc.o"
+".\objects\stm32f10x_it.o"
+".\objects\main.o"
+".\objects\system_stm32f10x.o"
+".\objects\tasks.o"
+".\objects\list.o"
+".\objects\port.o"
+".\objects\heap_4.o"
+--strict --scatter ".\Objects\stm32f103C6.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\stm32f103C6.map" -o .\Objects\stm32f103C6.axf
